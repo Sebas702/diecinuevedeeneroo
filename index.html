@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Para mi preciosa 🤍</title>
+  <title>Para mi reina 🤍</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
     * {
@@ -11,7 +11,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Georgia', 'Times New Roman', serif;
       background: linear-gradient(135deg, #fffaf0 0%, #fdf4f0 100%);
@@ -19,11 +18,22 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
-
     .container {
       max-width: 1100px;
       margin: 0 auto;
       padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Fondo flores inicio */
+    .floral-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.08;
+      background: url('https://thumbs.dreamstime.com/b/soft-pink-tulips-arranged-elegantly-light-pastel-background-showcasing-delicate-petals-lush-green-leaves-elegant-422876736.jpg') center/cover no-repeat;
+      z-index: 1;
     }
 
     /* Pantalla 1 - Código */
@@ -35,6 +45,7 @@
       min-height: 100vh;
       text-align: center;
       transition: opacity 1s ease;
+      position: relative;
     }
 
     h1 {
@@ -177,17 +188,22 @@
       transform: scale(1.06);
     }
 
-    /* Pantalla 3 - Carta abierta */
+    /* Pantalla 3 - Carta abierta con flores alrededor */
     #screen3 {
       display: none;
       min-height: 100vh;
       padding: 60px 20px;
       background: linear-gradient(to bottom, #fffaf0, #fdf4f0);
+      position: relative;
+    }
+
+    .letter-wrapper {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
     .letter {
-      max-width: 820px;
-      margin: 0 auto;
       background: white;
       padding: clamp(3rem, 7vw, 5rem) clamp(2rem, 6vw, 4rem);
       border-radius: 18px;
@@ -196,6 +212,34 @@
       line-height: 1.82;
       font-size: clamp(1.1rem, 3.2vw, 1.22rem);
       color: #3f2e24;
+      position: relative;
+      z-index: 2;
+    }
+
+    .floral-decor-top,
+    .floral-decor-bottom {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 200px;
+      pointer-events: none;
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0.25;
+      z-index: 1;
+    }
+
+    .floral-decor-top {
+      top: -80px;
+      background-image: url('https://thumbs.dreamstime.com/b/delicate-pink-white-roses-rich-green-leaves-elegant-flower-buds-compose-graceful-floral-frame-fresh-bouquet-decorates-soft-beige-410778932.jpg');
+      background-position: top center;
+    }
+
+    .floral-decor-bottom {
+      bottom: -80px;
+      background-image: url('https://thumbs.dreamstime.com/b/beautiful-bouquet-pink-lilies-white-flowers-arranged-wooden-surface-soft-natural-light-vibrant-featuring-delicate-399542576.jpg');
+      background-position: bottom center;
     }
 
     .letter h2 {
@@ -228,16 +272,22 @@
       .letter {
         padding: 2.5rem 1.8rem;
       }
+      .floral-decor-top, .floral-decor-bottom {
+        height: 150px;
+        opacity: 0.20;
+      }
     }
   </style>
 </head>
 <body>
 
+  <div class="floral-bg"></div>
+
   <!-- Pantalla 1: introducir código -->
   <div id="screen1">
     <div class="container">
-      <h1>Introduce el código, bebe</h1>
-      <p class="subtitle">tu sabes bien cual es.🤍</p>
+      <h1>Introduce el código blanquiita </h1>
+      <p class="subtitle">Solo tu sabes cual es 🤍</p>
 
       <div class="code-input">
         <input type="text" class="digit" maxlength="1" pattern="[0-9]" inputmode="numeric" id="d1" autofocus>
@@ -254,10 +304,10 @@
     <div class="roses-bg"></div>
     <div class="container">
       <div class="note">
-        <h2 style="color:#d89a9e; margin-bottom:1.8rem;">Suerte la mía…</h2>
+        <h2 style="color:#d89a9e; margin-bottom:1.8rem;">Teamo demasiao </h2>
         <p style="font-size: clamp(1.3rem, 4.5vw, 1.5rem); line-height:1.7;">
           Suerte la mía de tenerte hoy<br>
-          Te amo, miniña 🤍
+          Te amo miniña 🤍
         </p>
       </div>
 
@@ -267,31 +317,35 @@
     </div>
   </div>
 
-  <!-- Pantalla 3: carta abierta -->
+  <!-- Pantalla 3: carta abierta con tulipanes y lirios alrededor -->
   <div id="screen3">
     <div class="container">
-      <div class="letter">
-        <h2>Feliz año, amoooooor 🤍</h2>
-        
-        <p>Pero no me voy a cansar de decirte que más feliz estoy yo de tenerte aquí a mi lado un día más, y hoy especialmente no es un día cualquiera, estoy muy muy muy feliz de poder tenerte mor, y ya son 365 días.</p>
-        
-        <p>Gracias amor por tratarme como siempre me has tratado, en los momentos buenísimos, malos, y en esos momentos donde estoy yo más rayado que una peonza dando vueltas y vueltas.</p>
-        
-        <p>El conocerte es lo mejor que me pudo traer el año pasado, tan imprevisto, y llegando al punto de tener claro que eres el amor de mi vida, y no lo digo por quedar bien ni mucho menos porque sí, lo digo porque es lo que siento, por lo que me haces sentir, por lo que me sacas solo tú de dentro, con esas sonrisas tan preciosas, con esos ojos que dan miradas para desmayarte 540 veces, con esos morros tan bellos, esa piel tan suave y sensible, esas pequitas, porque eres mi pequitas boba, aunque seas una rayada y no te gusten, siempre bella, porque la que es bella lo es y eso no se puede fingir</p>
-        
-        <p>pero contigo he aprendido que la belleza no es solo externa, cuando entiendes que hay una belleza interna, de otro ser, del alma, de la presencia, de la voz, de que una persona con sus cosas, por simples que sean, te pueda sacar de cualquier rayada, con esa voz tan hermosa y, sobre todo, frente a cualquier cosa, con su corazón</p>
-        
-        <p>cuando alguien llega a entender lo profundo que puede ser el feeling con una persona, es otro rollo, y para mí, mi niña bella, esto es otro rollo, es más que cualquier cosa, somos tú y yo, y ese feeling no lo podrá entender nadie por mucho que lo intente, nadie entenderá a mi rubia, a mi baby lauri, que ama el turquesa y ahora más el beige, aquella que vende el riñón por anuel y adele, esa personita tan bella, tan hermosa, con sus valores, que sigue esforzándose por todo lo que sueña y quiere, y yo más que orgulloso estoy de ti, vida mía</p>
-        
-        <p>de verdad, me siento muy feliz, muy cómodo, muy a gusto, con ganas de darlo todo mientras sea a tu lado, bebé, agradecido a la vida por traerme la fortuna a mi puta puerta, a la mía, siendo un cualquiera</p>
-        
-        <p>quiero y deseo seguir viéndote crecer, progresar, ser mejor persona, estar en proyectos contigo, mi amor, lo sé bien, que lo quiero todo, pero solo mientras sea a tu lado, orgulloso siempre de ti, feliz por haber podido crecer como persona a tu lado, mi vida, tantas cositas que nos han pasado, y yo sé que vamos bien, no cambiaría esto por nada</p>
-        
-        <p>siempre apoyándote, queriéndote y cuidándote, con ganas de que todo nos salga bien, por nuestro 702 y ya con tu stanley en casita, una vez más, y no la última, feliz 19 amor mío, feliz año y más feliz de estar a tu lado</p>
-        
-        <p>porque solo somos tú y yo, mi niña, porque te elijo todos los días, porque eres tú, y porque te amo demasiado 🤍</p>
-        
-        <p class="signature">pd te pediría ser mi 25 de enero, pero todavía no podemos, poco a poco sé que se nos va a dar, mooor 😘</p>
+      <div class="letter-wrapper">
+        <div class="floral-decor-top"></div>
+        <div class="letter">
+          <h2>Feliz año, amoooooor 🤍</h2>
+          
+          <p>Pero no me voy a cansar de decirte que más feliz estoy yo de tenerte aquí a mi lado un día más, y hoy especialmente no es un día cualquiera, estoy muy muy muy feliz de poder tenerte mor, y ya son 365 días.</p>
+          
+          <p>Gracias amor por tratarme como siempre me has tratado, en los momentos buenísimos, malos, y en esos momentos donde estoy yo más rayado que una peonza dando vueltas y vueltas.</p>
+          
+          <p>El conocerte es lo mejor que me pudo traer el año pasado, tan imprevisto, y llegando al punto de tener claro que eres el amor de mi vida, y no lo digo por quedar bien ni mucho menos porque sí, lo digo porque es lo que siento, por lo que me haces sentir, por lo que me sacas solo tú de dentro, con esas sonrisas tan preciosas, con esos ojos que dan miradas para desmayarte 540 veces, con esos morros tan bellos, esa piel tan suave y sensible, esas pequitas, porque eres mi pequitas boba, aunque seas una rayada y no te gusten, siempre bella, porque la que es bella lo es y eso no se puede fingir</p>
+          
+          <p>pero contigo he aprendido que la belleza no es solo externa, cuando entiendes que hay una belleza interna, de otro ser, del alma, de la presencia, de la voz, de que una persona con sus cosas, por simples que sean, te pueda sacar de cualquier rayada, con esa voz tan hermosa y, sobre todo, frente a cualquier cosa, con su corazón</p>
+          
+          <p>cuando alguien llega a entender lo profundo que puede ser el feeling con una persona, es otro rollo, y para mí, mi niña bella, esto es otro rollo, es más que cualquier cosa, somos tú y yo, y ese feeling no lo podrá entender nadie por mucho que lo intente, nadie entenderá a mi rubia, a mi baby lauri, que ama el turquesa y ahora más el beige, aquella que vende el riñón por anuel y adele, esa personita tan bella, tan hermosa, con sus valores, que sigue esforzándose por todo lo que sueña y quiere, y yo más que orgulloso estoy de ti, vida mía</p>
+          
+          <p>de verdad, me siento muy feliz, muy cómodo, muy a gusto, con ganas de darlo todo mientras sea a tu lado, bebé, agradecido a la vida por traerme la fortuna a mi puta puerta, a la mía, siendo un cualquiera</p>
+          
+          <p>quiero y deseo seguir viéndote crecer, progresar, ser mejor persona, estar en proyectos contigo, mi amor, lo sé bien, que lo quiero todo, pero solo mientras sea a tu lado, orgulloso siempre de ti, feliz por haber podido crecer como persona a tu lado, mi vida, tantas cositas que nos han pasado, y yo sé que vamos bien, no cambiaría esto por nada</p>
+          
+          <p>siempre apoyándote, queriéndote y cuidándote, con ganas de que todo nos salga bien, por nuestro 702 y ya con tu stanley en casita, una vez más, y no la última, feliz 19 amor mío, feliz año y más feliz de estar a tu lado</p>
+          
+          <p>porque solo somos tú y yo, mi niña, porque te elijo todos los días, porque eres tú, y porque te amo demasiado 🤍</p>
+          
+          <p class="signature">pd te pediría ser mi 25 de enero, pero todavía no podemos, poco a poco sé que se nos va a dar, mooor 😘</p>
+        </div>
+        <div class="floral-decor-bottom"></div>
       </div>
     </div>
   </div>
